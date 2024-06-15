@@ -1,0 +1,52 @@
+<p>landingpage works!</p>
+{{phone}}
+<!-- <div *ngFor="let a of mydata">
+    <p>{{a.name}} {{a.age}}</p>
+</div> -->
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p *ngFor="let a of mydata">{{a.name}} {{a.age}}</p>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 p-3">
+            <select [ngClass]="'form-select'">
+                <option *ngFor="let a of mydata">{{a.name}}</option>
+            </select>
+        </div>
+        <div class="col-6 p-3">
+            <select [ngClass]="'form-select'">
+                <option *ngFor="let a of mydata">{{a.age | number:'1.0-5'}}</option>
+            </select>
+        </div>
+        
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let a of mydata">
+                    <th scope="row">1</th>
+                    <td>{{a.name}}</td>
+                    <td>{{a.age}}</td>
+                    <!-- <td [ngClass]="a.status=='success' ? 'bg-success' : 'bg-danger'">{{a.status}}</td> -->
+                    <td [ngClass]="a.status=='success' ? 'bg-success' : a.status=='pending' ? 'bg-primary' : 'bg-dark'">{{a.status}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
