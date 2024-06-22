@@ -1,1 +1,56 @@
-<p>registor works!</p>
+
+<form [formGroup]="registor">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 p-2 shadow">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>New Registor page</h1>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" [formControl]="email">
+                         
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label">FullNaME</label>
+                            <input type="text" class="form-control">
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label">Phone No</label>
+                            <input type="text" class="form-control">
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label class="form-label">Course</label>
+                           <select class="form-select">
+                            <option>mern</option>
+                            <option>mean</option>
+                            <option>angular</option>
+                            <option>reactjs</option>
+                           </select>
+                          </div>
+                    </div>
+                    <div class="col-12 p-2">
+                        <div class="mb-3">
+                            <input type="button" value="login" class="btn btn-success" (click)="mysubmit()">
+                            <input type="button" value="cancel" class="btn btn-danger ms-3">
+                            <a routerLink="/auth" class="btn btn-success">go to login</a>
+                          </div>
+                    </div>
+              
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</form>

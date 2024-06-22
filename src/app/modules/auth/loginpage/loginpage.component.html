@@ -1,4 +1,54 @@
-<p>loginpage works!</p>
 
 
-<a routerLink="/dashboard" class="btn btn-success">go to dashboard</a>
+
+<!-- 
+<mat-grid-list cols="6" rowHeight="100vh">
+    @for (tile of tiles; track tile) {
+      <mat-grid-tile
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">{{tile.text}}
+
+    </mat-grid-tile>
+    }
+  </mat-grid-list> -->
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-5 p-5 shadow">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Login page</h1>
+                    </div>
+                    <div class="col-12 p-2">
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control">
+                            <div class="form-text">Email required</div>
+                          </div>
+                    </div>
+                    <div class="col-12 p-2">
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="password" class="form-control">
+                            <div class="form-text">password required</div>
+                          </div>
+                    </div>
+                    <div class="col-12 p-2">
+                        <div class="mb-3">
+                            <input type="button" value="login" class="btn btn-success">
+                            <input type="button" value="cancel" class="btn btn-danger ms-3">
+                            <a routerLink="/dashboard" class="btn btn-success">go to dashboard</a><br>
+                            <a routerLink="/auth/registor">New Registor</a>
+                          </div>
+                    </div>
+              
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
