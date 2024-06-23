@@ -12,6 +12,100 @@
         </div>
     </div>
 </div> -->
+<h1>sdjfhsdf</h1>
+<ng-template>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+</ng-template>
+<ng-content>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+  <div>use of angular custom elements</div>
+</ng-content>
+
+
+<ng-container>
+
+  <ng-content>
+    <h2>this is my content of container</h2>
+  </ng-content>
+
+  <ng-template>
+    <div>this is false condition</div>
+  </ng-template>
+
+</ng-container>
+
+@if (a>20000)
+{
+  {{msg}}
+}
+@else
+{
+  {{msg1}}
+}
+
+<h1>use of for </h1>
+
+<ul>
+@for(t of myjson; track t.age; let mycount = $index)
+{
+  <li>{{mycount}}: {{t.name}} : {{t.age}}</li>
+
+}
+@empty
+{
+  {{'this is empty'}}
+}
+</ul>
+
+
+<h1>use of block switch </h1>
+
+@switch(age)
+{
+  @case (50)
+  {
+    {{'this is 50'}}
+  }
+  @case (80)
+  {
+    {{'this is 80'}}
+  }
+  @default {
+    {{'this is default case'}}
+  }
+}
+
+<h1>use of ng if in angular</h1>
+
+<div *ngif="abc as false" >
+
+<ng-content >
+  <h1>this is true condtion</h1>
+</ng-content>
+
+<ng-template #fals>
+  <h1>this is flase condtion</h1>
+</ng-template>
+
+</div>
+
+
+
+
+
+
+
 
 
 <div class="container">
@@ -95,3 +189,5 @@
 		}
 	</tbody>
 </table>
+
+

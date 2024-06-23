@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgFor,NgClass,DecimalPipe} from '@angular/common';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 interface Country {
 	name: string;
 	flag: string;
@@ -69,6 +70,27 @@ phone:number = 58745955478
 countries = COUNTRIES;
 mydata = datalist
 
+a:number=500
+msg:string="this is first condiotion";
+msg1:string ="this is second tiondion";
+
+
+myjson:any= [
+	{name:"ravi",age:50},
+	{name:"ravi",age:50},
+	{name:"ravi",age:50},
+	{name:"ravi",age:50},
+	{name:"ravi",age:50},
+	{name:"ravi",age:50},
+	{name:"ravi",age:50},
+	];
+	
+age:number=500;
+
+
+abc:boolean= true;
 
 
 }
+
+

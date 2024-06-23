@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { FormsModule,ReactiveFormsModule,FormControl,FormGroup, ɵFormControlCtor } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule,FormControl,FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-registor',
@@ -9,19 +9,16 @@ import { FormsModule,ReactiveFormsModule,FormControl,FormGroup, ɵFormControlCto
   templateUrl: './registor.component.html',
   styleUrl: './registor.component.scss'
 })
-export class RegistorComponent {
+export class RegistorComponent implements OnInit {
   
 
-  // registor = new FormGroup({
-  //     email:new FormControl('')
-  // })
 
-  // mysubmit()
-  // {
-  //   console.log(this.registor);
-  // }
+ngOnInit(): void {
+
+}
 
 
 
 }
+
 
