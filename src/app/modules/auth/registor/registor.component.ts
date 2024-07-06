@@ -20,11 +20,19 @@ export class RegistorComponent implements OnInit {
 
   myformsubmit()
   {
-    console.log(this.myform);
+    console.log(this.myform.value);
   }
+
+  name:string ="kjusdfjsdf";
+mysubmit()
+{
+  console.log(this.name);
+}
 
 
 ngOnInit(): void {
+
+  this.mysubmit();
 
 }
 

@@ -1,0 +1,73 @@
+<form (ngSubmit)="myformsubmit()">
+    <div class="container" >
+        <div class="row justify-content-center">
+            <div class="col-sm-8 p-2 shadow">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>template form</h1>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control" [(ngModel)]="myforms.email" name="email" #email="ngModel" required minlength="5">
+                                @if(email.touched && email.errors?.['required'])
+                                {
+                                    <h2 class="text-danger">required input</h2>
+                                }
+                                @else if(email.errors?.['minlength'])
+                                {
+                                    <h2 class="text-danger">minimul 5 length</h2>
+                                }
+                                
+                              </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label">FullNaME</label>
+                                <input type="text" class="form-control" [(ngModel)]="myforms.fullname" name="fullname" #fullname="ngModel" required minlength="10">
+                                @if(fullname.errors?.['invalid'])
+                                {
+                                    <h2 class="text-danger">required input</h2>
+                                }
+                                @else if(fullname.errors?.['minlength'])
+                                {
+                                    <h2 class="text-danger">minimul 10 length</h2>
+                                }
+                              </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label">Phone No</label>
+                                <input type="text" class="form-control" [(ngModel)]="myforms.phone" name="phone" #course="ngModel" required >
+                              </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label">Course</label>
+                               <select class="form-select" [(ngModel)]="myforms.course" name="course" #course="ngModel" required>
+                                <option>mern</option>
+                                <option>mean</option>
+                                <option>angular</option>
+                                <option>reactjs</option>
+                               </select>
+                              </div>
+                        </div>
+                        <div class="col-12 p-2">
+                            <div class="mb-3">
+                                <input type="submit" value="login" class="btn btn-success">
+                                <input type="button" value="cancel" class="btn btn-danger ms-3">
+                                <a routerLink="/auth" class="btn btn-success">go to login</a>
+                                <a routerLink="/auth/registor">react forms</a>
+                              </div>
+                        </div>
+                        {{myforms | json}}
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    </form>
