@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor,NgClass,DecimalPipe} from '@angular/common';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { MynavComponent } from '../mynav/mynav.component';
 
 
 interface Country {
@@ -61,7 +62,7 @@ const datalist: Mydatatype[]= [
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [NgFor,NgClass,DecimalPipe,NgbAccordionModule],
+  imports: [NgFor,NgClass,DecimalPipe,NgbAccordionModule,MynavComponent],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })
