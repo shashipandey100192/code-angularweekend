@@ -1,4 +1,4 @@
-
+<!-- 
 <form [formGroup]="myform" (ngSubmit)="mysubmit()">
 <div class="container">
     <div class="row justify-content-center">
@@ -50,4 +50,27 @@
     </div>
   </div>
 
+</form> -->
+
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="username" required />
+    <div *ngIf="username.invalid && username?.['touched']">
+        <div *ngIf="username.errors?.['required']">
+            Field is required.
+        </div>
+        <div *ngIf="username.errors?.['custom']">
+            Custom validation failed.
+        </div>
+    </div>
+    <input type="text" formControlName="phoneno" required />
+    <div *ngIf="phoneno.invalid && phoneno?.['touched']">
+        <div *ngIf="phoneno.errors?.['required']">
+            Field is required.
+        </div>
+        <div *ngIf="phoneno.errors?.['custom']">
+           phoneno is required
+        </div>
+    </div>
+    <button type="submit">Submit</button>
 </form>

@@ -16,6 +16,7 @@ export class MycolorDirective {
 @HostListener('mouseout') onMouseOut() {
   this.render.setStyle(this.myel.nativeElement,'color','blue');
   this.render.setStyle(this.myel.nativeElement,'backgroundColor','orange');
+  
 }
 
 
