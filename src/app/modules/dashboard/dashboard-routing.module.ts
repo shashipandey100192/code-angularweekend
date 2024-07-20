@@ -4,6 +4,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { PagedesignComponent } from './pagedesign/pagedesign.component';
 
 import { MyltileverformComponent } from './myltileverform/myltileverform.component';
+import { ApidataComponent } from './apidata/apidata.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path:'multiform',
     component:MyltileverformComponent
+  },
+  {
+    path:'apidata',
+    component:ApidataComponent
   }
 ];
 

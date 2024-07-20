@@ -1,0 +1,20 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">sno</th>
+        <th scope="col">userId</th>
+        <th scope="col">title</th>
+        <th scope="col">body text</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of myalldata">
+        <th scope="row">{{a.id}}</th>
+        <td>{{a.userId}}</td>
+        <td>{{a.title}}</td>
+        <td>{{a.body}}</td>
+      </tr>
+    </tbody>
+  </table>
