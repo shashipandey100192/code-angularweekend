@@ -5,6 +5,7 @@ import { PagedesignComponent } from './pagedesign/pagedesign.component';
 
 import { MyltileverformComponent } from './myltileverform/myltileverform.component';
 import { ApidataComponent } from './apidata/apidata.component';
+import { ErrorpageComponent } from './shareComponent/errorpage/errorpage.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'apidata',
     component:ApidataComponent
+  },
+  {
+    path:'**',
+    component:ErrorpageComponent
   }
 ];
 

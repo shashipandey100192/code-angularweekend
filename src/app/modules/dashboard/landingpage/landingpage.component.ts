@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgFor,NgClass,DecimalPipe} from '@angular/common';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { MynavComponent } from '../mynav/mynav.component';
+import { RouterOutlet } from '@angular/router';
+import { GeneralapiService } from '../../services/generalapi.service';
 
 
 interface Country {
@@ -62,11 +64,15 @@ const datalist: Mydatatype[]= [
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [NgFor,NgClass,DecimalPipe,NgbAccordionModule,MynavComponent],
+  imports: [NgFor,NgClass,DecimalPipe,NgbAccordionModule,MynavComponent,RouterOutlet],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })
-export class LandingpageComponent {
+export class LandingpageComponent implements OnInit{
+
+constructor(private myservice : GeneralapiService){}
+
+	
 phone:number = 58745955478
 countries = COUNTRIES;
 mydata = datalist
@@ -90,6 +96,21 @@ age:number=500;
 
 
 abc:boolean= true;
+
+
+mydatas1:any[]=[];
+
+ngOnInit(): void {
+		this.mydatas();
+}
+
+
+mydatas()
+{
+	this.myservice.mygetdata().subscribe((d:any)=>{
+		this.mydatas1 = d;
+	})
+}
 
 
 }
