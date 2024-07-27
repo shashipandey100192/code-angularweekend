@@ -1,0 +1,41 @@
+<p>logicalpage works!</p>
+
+{{name}}
+<!-- <form [formGroup]="myform">
+<input type="text"  [(ngModel)]="abc" name="abc" #abc="ngModel">
+{{abc}} -->
+
+<!-- </form> -->
+
+
+
+
+
+<div class="container" [ngSwitch]="name" >
+
+            <div class="row" *ngSwitchCase="'kumar'">
+                <div class="col-12 p-3 bg-danger">
+                    <h1>this is first condition</h1>
+                </div>
+            </div>
+
+            <div class="row" *ngSwitchCase="'rohit'">
+                <div class="col-12 p-3 bg-success">
+                    <h1>this is second condition</h1>
+                </div>
+            </div>
+
+            <div class="row" *ngSwitchCase="'pankaj'">
+                <div class="col-12 p-3 bg-warning">
+                    <h1>this is third condition</h1>
+                </div>
+            </div>
+
+
+            <div class="row" *ngSwitchDefault>
+                <div class="col-12 p-3 info">
+                    <h1>this is defalt condition</h1>
+                </div>
+            </div>
+
+</div>
