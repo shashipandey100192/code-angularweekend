@@ -39,3 +39,79 @@
             </div>
 
 </div>
+
+
+<h1>this is virtual element</h1>
+
+<div class="container" [ngSwitch]="course" >
+
+
+    <ng-template *ngSwitchCase="'mern'">
+        <div class="col-12 p-3 bg-danger">
+            <h1>this is first condition</h1>
+        </div>
+    </ng-template>
+
+    <div *ngSwitchCase="'mean'">
+        <div class="col-12 p-3 bg-danger">
+            <h1>this is first condition</h1>
+        </div>
+    </div>
+
+
+    <ng-template *ngSwitchDefault>
+        <div class="col-12 p-3 bg-danger">
+            <h1>this is first condition</h1>
+        </div>
+    </ng-template>
+
+</div>
+
+
+<ng-container *ngIf="a;else abc">
+  <h2>List of Items</h2>
+  <ul>
+    <li>ksdfjkshdjfksdf</li>
+  </ul>
+  <ng-content>pppppppppppp{{a}} {{age}}</ng-content>
+  <ng-content *ngIf="age">
+    <h1>skdfjksdjf</h1>
+  </ng-content>
+
+</ng-container>
+<ng-template #abc>
+    <h1>sdjfhsdjfhsjdfhjsdhfjshdfjhsdjfhsjd</h1>
+    <ng-content>pppppppppppp{{a}} </ng-content>
+</ng-template>
+
+<hr>
+
+<ng-container *ngIf="b;else xyz">
+    <div class="card bg-info">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6-DQF2pBwNFV9KzPafu9RghrNF1tZ8J3AA&s" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+</ng-container>
+
+<ng-template #xyz>
+    <div class="card bg-warning">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6-DQF2pBwNFV9KzPafu9RghrNF1tZ8J3AA&s" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">Card title</h5>
+          <ng-content>
+            <h5>{{d}}</h5>
+          </ng-content>
+          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Card title</h5>
+        </div>
+      </div>
+</ng-template>
+
