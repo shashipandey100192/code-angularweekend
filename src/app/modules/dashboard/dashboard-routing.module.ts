@@ -7,6 +7,7 @@ import { MyltileverformComponent } from './myltileverform/myltileverform.compone
 import { ApidataComponent } from './apidata/apidata.component';
 import { ErrorpageComponent } from './shareComponent/errorpage/errorpage.component';
 import { LogicalpageComponent } from './logicalpage/logicalpage.component';
+import { DetailspageComponent } from './detailspage/detailspage.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path:'logical',
     component:LogicalpageComponent
+  },
+  {
+    path:'apidata/details/:id',
+    component:DetailspageComponent
   },
   {
     path:'**',

@@ -15,4 +15,11 @@ export class GeneralapiService {
     return this.http.get(this.mypath);
   }
 
+  getsingledata(id:any)
+  {
+    return this.http.get(this.mypath,id);
+  }
+
+
+
 }

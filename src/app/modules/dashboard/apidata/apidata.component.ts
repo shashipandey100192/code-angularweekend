@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { GeneralapiService } from '../../services/generalapi.service';
 import { HttpClient } from '@angular/common/http';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-apidata',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,RouterLink],
   templateUrl: './apidata.component.html',
   styleUrl: './apidata.component.scss'
 })
