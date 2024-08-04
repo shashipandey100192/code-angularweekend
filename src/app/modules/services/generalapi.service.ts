@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +16,20 @@ export class GeneralapiService {
     return this.http.get(this.mypath);
   }
 
-  getsingledata(id:any)
+  // getsingledata(id:any)
+  // {
+  //   let ids = id;
+  //   return this.http.get(this.mypath+"/"+ids);
+  // }
+
+
+  getsingledata(id:any):Observable<any>
   {
-    return this.http.get(this.mypath,id);
+    let ids = id;
+    return this.http.get(this.mypath+"/"+ids);
   }
+
+
 
 
 

@@ -8,6 +8,7 @@ import { ApidataComponent } from './apidata/apidata.component';
 import { ErrorpageComponent } from './shareComponent/errorpage/errorpage.component';
 import { LogicalpageComponent } from './logicalpage/logicalpage.component';
 import { DetailspageComponent } from './detailspage/detailspage.component';
+import { ParentpageComponent } from './parentpage/parentpage.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path:'apidata/details/:id',
     component:DetailspageComponent
+  },
+  {
+    path:'parent',
+    component:ParentpageComponent
   },
   {
     path:'**',

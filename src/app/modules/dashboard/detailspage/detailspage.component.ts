@@ -13,6 +13,8 @@ export class DetailspageComponent implements OnInit {
 constructor(private service:GeneralapiService,private http:ActivatedRoute){}
 id:any;
 
+singledatas:any;
+
 ngOnInit(): void {
   // const id:any =this.http.snapshot.paramMap.get('id');
 // this.id =this.http.snapshot.paramMap.get('id');
@@ -26,6 +28,7 @@ mysingledata()
   this.id =this.http.snapshot.paramMap.get('id');
   this.service.getsingledata(this.id).subscribe((data)=>{
     console.log(data)
+    this.singledatas=data;
 
   })
 }
