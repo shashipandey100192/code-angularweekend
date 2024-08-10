@@ -18,7 +18,23 @@ myfunc()
   alert("welcom to pass");
 }
 
-xyz:string="";
+myoutputmsg:any="";
+mygetdata(xyz:any)
+{
+    console.log(xyz);
+    this.myoutputmsg=xyz;
+}
+
+
+mystoredata():void
+{
+  window.localStorage.setItem("mykey",JSON.stringify(this.myarr));
+  window.sessionStorage.setItem("seskey","sessiondata");
+
+}
+
+
+
 
 
 }

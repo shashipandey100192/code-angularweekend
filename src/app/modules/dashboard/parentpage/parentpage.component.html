@@ -1,8 +1,10 @@
 <p>parentpage works!</p>
 <!-- <app-childpag [abc]="'this is data from parent'"></app-childpag> -->
 
-<h1>{{xyz}}</h1>
 
-<app-childpag [abc]="first" [mydata]="myarr" [myfun]="myfunc" [myoutdata]="xyz"></app-childpag>
+{{myoutputmsg}}
+<app-childpag [abc]="first" [mydata]="myarr" [myfun]="myfunc" (myoutdata)="mygetdata($event)"></app-childpag>
 
+
+<button (click)="mystoredata()">set storage data</button>
 

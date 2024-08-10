@@ -112,6 +112,14 @@ mydatas()
 	})
 }
 
+mylocaldatas:any;
+
+getlocaldata():void
+{
+	this.mylocaldatas = JSON.parse(window.localStorage.getItem("mykey"));
+	console.log(this.mylocaldatas);
+}
+
 
 }
 

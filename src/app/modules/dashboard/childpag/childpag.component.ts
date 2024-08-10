@@ -17,5 +17,10 @@ export class ChildpagComponent {
 @Output() 
   myoutdata = new EventEmitter<any>()
 
+  mypage()
+  {
+      this.myoutdata.emit("pppppppppppppppppppppppppppppppppp");
+  }
+
 
 }
