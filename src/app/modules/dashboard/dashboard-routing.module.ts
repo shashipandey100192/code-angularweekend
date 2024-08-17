@@ -9,6 +9,7 @@ import { ErrorpageComponent } from './shareComponent/errorpage/errorpage.compone
 import { LogicalpageComponent } from './logicalpage/logicalpage.component';
 import { DetailspageComponent } from './detailspage/detailspage.component';
 import { ParentpageComponent } from './parentpage/parentpage.component';
+import { MychartComponent } from './mychart/mychart.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,11 @@ const routes: Routes = [
     path:'parent',
     component:ParentpageComponent
   },
+  {
+    path:'charts',
+    component:MychartComponent
+  },
+
   {
     path:'**',
     component:ErrorpageComponent

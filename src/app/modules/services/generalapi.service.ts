@@ -30,6 +30,14 @@ export class GeneralapiService {
   }
 
 
+  mydelete(id:number):Observable<any>
+  {
+    return this.http.delete(`${this.mypath}/${id}`);
+  }
+
+  
+
+
 
 
 

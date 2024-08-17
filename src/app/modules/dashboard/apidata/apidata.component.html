@@ -18,7 +18,7 @@
         <td class="tcw">
           <a [routerLink]="['details/',a.id]" class="btn btn-primary btn-sm">View</a>
           <a routerLink="" class="btn btn-warning btn-sm ms-2">Edit</a>
-          <a routerLink="" class="btn btn-danger btn-sm ms-2">Del</a>
+          <button type="button" class="btn btn-danger btn-sm ms-2" (click)="deletecored(a.id)">Del</button>
           
         </td>
       </tr>

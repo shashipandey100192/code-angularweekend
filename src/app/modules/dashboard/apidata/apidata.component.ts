@@ -30,4 +30,17 @@ myalldata:any[]=[];
     })
   }
 
+  deletecored(id:any)
+  {
+    this.genapi.mydelete(id).subscribe((d:any)=>{
+      this.myalldata = this.myalldata.filter(y => y.id!==id)
+      console.log(d);
+      // this.mydata();
+
+    })
+
+  }
+
+
+
 }
