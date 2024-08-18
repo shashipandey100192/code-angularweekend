@@ -10,6 +10,7 @@ import { LogicalpageComponent } from './logicalpage/logicalpage.component';
 import { DetailspageComponent } from './detailspage/detailspage.component';
 import { ParentpageComponent } from './parentpage/parentpage.component';
 import { MychartComponent } from './mychart/mychart.component';
+import { LocaldatapageComponent } from './localdatapage/localdatapage.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path:'charts',
     component:MychartComponent
+  },
+  {
+    path:'local',
+    component:LocaldatapageComponent
   },
 
   {
